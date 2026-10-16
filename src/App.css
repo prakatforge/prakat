@@ -1,0 +1,329 @@
+
+/* ==============================
+   PRAKAT FORGE — MODERN LANDING
+   ============================== */
+
+.prakat-main {
+    --primary: #7C3AED;
+    --primary-dark: #5B21B6;
+    --cyan: #06B6D4;
+    --dark: #111827;
+    --muted: #64748B;
+
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: 80vh;
+    padding: 90px 8% 80px;
+    color: var(--dark);
+    font-family: Inter, Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(124, 58, 237, 0.13),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 92% 25%,
+            rgba(6, 182, 212, 0.15),
+            transparent 27%
+        ),
+        linear-gradient(
+            135deg,
+            #F8FAFC 0%,
+            #F3F0FF 48%,
+            #ECFEFF 100%
+        );
+}
+
+/* Hero section */
+
+.hero {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-bottom: 22px;
+
+    color: var(--primary-dark);
+    background: rgba(124, 58, 237, 0.09);
+    border: 1px solid rgba(124, 58, 237, 0.18);
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 0 0 26px;
+    color: var(--dark);
+
+    font-size: clamp(42px, 6.5vw, 76px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    display: inline-block;
+
+    background: linear-gradient(
+        100deg,
+        #7C3AED 5%,
+        #9333EA 45%,
+        #0891B2 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.hero-description {
+    max-width: 660px;
+    margin: 0 auto;
+
+    color: #526077;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* Call-to-action buttons */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 34px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+    padding: 0 26px;
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background: linear-gradient(
+        135deg,
+        #7C3AED,
+        #6D28D9
+    );
+
+    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(124, 58, 237, 0.32);
+}
+
+.btn-secondary {
+    color: var(--dark);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #D8DCE8;
+}
+
+.btn-secondary:hover {
+    color: var(--primary-dark);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(31, 41, 55, 0.08);
+}
+
+/* Service cards */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 30px;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 12px 35px rgba(31, 41, 55, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Color accent at the top of each card */
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #7C3AED,
+        #06B6D4
+    );
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(124, 58, 237, 0.3);
+    box-shadow: 0 22px 45px rgba(70, 50, 130, 0.12);
+}
+
+.service-card > span {
+    display: inline-grid;
+    place-items: center;
+
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+
+    color: #FFFFFF;
+    background: linear-gradient(
+        135deg,
+        #7C3AED,
+        #06B6D4
+    );
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.service-card h2 {
+    margin: 22px 0 12px;
+    color: #172033;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.service-card p {
+    margin: 0;
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .prakat-main {
+        padding: 75px 5% 60px;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .prakat-main {
+        padding: 55px 20px 45px;
+    }
+
+    .hero {
+        margin-bottom: 50px;
+    }
+
+    .hero-label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 52px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-card:last-child {
+        grid-column: auto;
+    }
+
+    .service-card {
+        padding: 26px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-primary,
+    .btn-secondary,
+    .service-card {
+        transition: none;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .service-card:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,69 @@
+
+/* Prakat Forge Navbar */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    padding: 18px 8%;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid #E8E4F5;
+    box-shadow: 0 4px 20px rgba(31, 41, 55, 0.04);
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+
+    padding: 10px 16px;
+    border-radius: 9px;
+
+    color: #374151;
+    text-decoration: none;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: #7C3AED;
+    background: #F3EFFF;
+}
+
+nav a:last-child {
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #7C3AED, #6D28D9);
+    box-shadow: 0 5px 14px rgba(124, 58, 237, 0.18);
+}
+
+nav a:last-child:hover {
+    background: linear-gradient(135deg, #6D28D9, #5B21B6);
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+
+@media (max-width: 480px) {
+    nav {
+        justify-content: center;
+        gap: 4px;
+        padding: 14px 8px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 9px 11px;
+        font-size: 13px;
+    }
+}
